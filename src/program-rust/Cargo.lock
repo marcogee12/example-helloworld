@@ -529,6 +529,7 @@ version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0901fc8eb0aca4c83be0106d6f2db17d86a08dfc2c25f0e84464bf381158add6"
 dependencies = [
+ "borsh-derive 1.4.0",
  "cfg_aliases",
 ]
 

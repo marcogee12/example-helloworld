@@ -16,7 +16,7 @@ import path from 'path';
 import * as borsh from 'borsh';
 
 import {getPayer, getRpcUrl, createKeypairFromFile} from './utils';
-import { Schema } from 'yaml';
+/**import { Schema } from 'yaml';*/
 
 /**
  * Connection to the network
@@ -76,15 +76,14 @@ const GreetingSchema = new Map([
   [GreetingAccount, {kind: 'struct', fields: [['counter', 'u32']]}],
 ]);
 
-const GreetingSchema2 = new Schema({})
+/**const GreetingSchema2 = new Schema({})*/
 
 /**
  * The expected size of each greeting account.
  */
 const GREETING_SIZE = borsh.serialize(
   GreetingSchema,
-  new GreetingAccount(),
-).length;
+  new GreetingAccount()).length;
 
 /**
  * Establish a connection to the cluster

@@ -16,6 +16,7 @@ import path from 'path';
 import * as borsh from 'borsh';
 
 import {getPayer, getRpcUrl, createKeypairFromFile} from './utils';
+import { Schema } from 'yaml';
 
 /**
  * Connection to the network
@@ -74,6 +75,8 @@ class GreetingAccount {
 const GreetingSchema = new Map([
   [GreetingAccount, {kind: 'struct', fields: [['counter', 'u32']]}],
 ]);
+
+const GreetingSchema2 = new Schema({})
 
 /**
  * The expected size of each greeting account.
